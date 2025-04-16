@@ -1,7 +1,6 @@
 import * as anchor from "@project-serum/anchor";
-import { Program } from "@project-serum/anchor";
-import { registerContractWorkflow } from "./registerContract";
-import { validarContrato } from "./validarContrato";
+import { registerContractWorkflow } from "./register-contract";
+import { validarContrato } from "./validar-contrato";
 
 const contrato = `
 Contrato de Prestação de Serviços
@@ -18,7 +17,7 @@ async function testar() {
   anchor.setProvider(provider);
 
   // Carregar o programa
-  const program = new Program(
+  /*const program = new Program(
     {
       version: "0.1.0",
       name: "lexachain_contract",
@@ -51,7 +50,7 @@ async function testar() {
     },
     new anchor.web3.PublicKey("14mNAGxBkZtxCF1YyB2R8TtarPyKU5HxrufoLzXBedjx"),
     provider
-  );
+  );*/
 
   // Registro do contrato
   const resultado = await registerContractWorkflow(contrato);
@@ -66,4 +65,4 @@ async function testar() {
   console.log("Validação do contrato:", validacao);
 }
 
-testar().catch(console.error);
+testar().catch(()=>{});

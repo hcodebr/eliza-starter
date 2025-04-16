@@ -19,11 +19,11 @@ import { startChat } from "./chat/index.ts";
 import { initializeClients } from "./clients/index.ts";
 import {
   getTokenForProvider,
-  loadCharacters,
   parseArguments,
 } from "./config/index.ts";
 import { initializeDatabase } from "./database/index.ts";
-import { analyzeContractTool } from "./tools/analyzeContract.ts";
+import { analyzeContractTool } from "./tools/analyze-contract.ts";
+import { startServer } from "./server.ts";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -135,11 +135,6 @@ const startAgents = async () => {
   let charactersArg = args.characters || args.character;
   let characters = [character];
 
-  console.log("charactersArg", charactersArg);
-  if (charactersArg) {
-    characters = await loadCharacters(charactersArg);
-  }
-  console.log("characters", characters);
   try {
     for (const character of characters) {
       await startAgent(character, directClient as DirectClient);
@@ -172,8 +167,12 @@ const startAgents = async () => {
     chat();
   }
 };
-
+/*
 startAgents().catch((error) => {
   elizaLogger.error("Unhandled error in startAgents:", error);
   process.exit(1);
+});
+*/
+startServer().finally(() => {
+  elizaLogger.log("Server started");
 });

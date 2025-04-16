@@ -1,6 +1,6 @@
-import { analyzeContractTool } from "./analyzeContract";
-import { gerarHashContrato } from "./gerarHashContrato";
-import { registerOnChain } from "./registerOnChain";
+import { analyzeContractTool } from "./analyze-contract";
+import { gerarHashContrato } from "./gerar-hash-contrato";
+import { registerOnChain } from "./register-on-chain";
 
 /**
  * Fluxo completo de análise, geração de hash e registro na blockchain.

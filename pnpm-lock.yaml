@@ -71,9 +71,18 @@ importers:
       better-sqlite3:
         specifier: 11.5.0
         version: 11.5.0
+      body-parser:
+        specifier: ^2.2.0
+        version: 2.2.0
+      express:
+        specifier: ^5.1.0
+        version: 5.1.0
       fs:
         specifier: 0.0.1-security
         version: 0.0.1-security
+      multer:
+        specifier: 1.4.5-lts.2
+        version: 1.4.5-lts.2
       net:
         specifier: 1.0.2
         version: 1.0.2
@@ -6816,6 +6825,10 @@ packages:
 
   multer@1.4.5-lts.1:
     resolution: {integrity: sha512-ywPWvcDMeH+z9gQq5qYHCCy+ethsk4goepZ45GLD63fOu0YcNecQxi64nDs3qluZB+murG3/D4dJ7+dGctcCQQ==}
+    engines: {node: '>= 6.0.0'}
+
+  multer@1.4.5-lts.2:
+    resolution: {integrity: sha512-VzGiVigcG9zUAoCNU+xShztrlr1auZOlurXynNvO9GiWD1/mTBbUljOKY+qMeazBqXgRnjzeEgJI/wyjJUHg9A==}
     engines: {node: '>= 6.0.0'}
 
   multistream@4.1.0:
@@ -20543,6 +20556,16 @@ snapshots:
       isarray: 1.0.0
 
   multer@1.4.5-lts.1:
+    dependencies:
+      append-field: 1.0.0
+      busboy: 1.6.0
+      concat-stream: 1.6.2
+      mkdirp: 0.5.6
+      object-assign: 4.1.1
+      type-is: 1.6.18
+      xtend: 4.0.2
+
+  multer@1.4.5-lts.2:
     dependencies:
       append-field: 1.0.0
       busboy: 1.6.0

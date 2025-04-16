@@ -1,4 +1,4 @@
-import { analyzeContractTool } from "./analyzeContract";
+import { analyzeContractTool } from "./analyze-contract";
 
 export const tools = [analyzeContractTool];
 

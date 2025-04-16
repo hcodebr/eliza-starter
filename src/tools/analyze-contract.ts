@@ -45,4 +45,4 @@ export const analyzeContractTool: Action = {
   validate: async (input) => true,
 };
 
-export default analyzeContractTool;
+export default analyzeContractTool

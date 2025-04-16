@@ -11,5 +11,4 @@ export function gerarHashContrato(content: string): string {
   return hash.digest("hex");
 }
 
-const hash = gerarHashContrato("console.log('Hello, world!');");
-console.log("hash do contrato: ", hash);
+
